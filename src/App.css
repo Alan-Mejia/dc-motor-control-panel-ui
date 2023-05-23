@@ -1,0 +1,180 @@
+h1{
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.motor-container{
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  top: 15vh;
+  /* background-color: aqua; */
+}
+
+.motor-base{
+  height: 300px;
+  width: 300px;
+  background-color: black;
+  clip-path: polygon(20% 70%, 80% 70%, 100% 100%, 0% 100%);
+  position: absolute;
+  top: 48px;
+  left: calc(50vw - 150px);  
+}
+
+.motor-box{
+  width: 250px;
+  height: 250px;
+  background-color: beige;
+  position: absolute;
+  left: calc(50vw - 155px);
+  border-radius: 50px 0px 0px 50px;
+  border: 8px solid black;
+}
+
+.motor-side-box{
+  position: absolute;
+  height: 250px;
+  width: 25px;
+  left: calc(50vw + 101px);
+  background-color: #D21312;
+  border: 8px solid black;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.motor-side2-box{
+  position: absolute;
+  height: 125px;
+  width: 25px;
+  left: calc(50vw + 137px);
+  top: 62.5px;
+  background-color:#D21312;
+  border: 8px solid black;
+  border-radius: 15px;
+}
+
+.inside-slot{
+  height: 25px;
+  width: 80%;
+  background-color: lightcoral;
+  margin: 0 auto;
+  border: 4px solid black;
+  border-radius: 15px;
+}
+
+.slots-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.motor-rotor{
+  position: absolute;
+  height: 62.5px;
+  width: 60px;
+  background-color: #7C96AB;
+  left: calc(50vw + 170px);
+  border: 8px solid black;
+  top: 93.75px;
+  border-radius: 0px 25px 25px 0px;
+  animation-name: spin;
+  /* animation-duration: 0ms; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+.control-panel{
+  position: absolute;
+  height: 35vh;
+  width: 100vw;
+  
+  top: calc(65vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-container{
+  width: 80%;
+  height: 80%;
+  background-color: #B2B2B2;
+  border: 10px solid #2A2F4F;
+  border-radius: 15px;
+  display: flex;
+}
+
+.buttons-container{
+  width: 20%;
+  height: 100%;
+  /* background-color: #D21312; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.start-button{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 0 auto;
+  background-color: green;
+  border: none;
+  outline: 5px solid black;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.start-button:hover{
+  cursor: pointer;
+}
+
+.start-button:active{
+  transform: scale(0.9);
+}
+
+.stop-button{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 0 auto;
+  background-color: #D21312;
+  border: none;
+  outline: 5px solid black;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.stop-button:hover{
+  cursor: pointer;
+}
+
+.stop-button:active{
+  transform: scale(0.9);
+}
+
+.inputs-container{
+  width: 60%;
+  height: 100%;
+  /* background-color: #2A2F4F; */
+}
+
+.inputs-box{
+  height: calc(100% - 20px);
+  width: 100%;
+  background-color: aliceblue;
+  margin-top: 10px;
+}
+
+
+@keyframes spin {
+  from {
+      transform:rotateX(0deg);
+  }
+  to {
+      transform:rotateX(360deg);
+  }
+}
